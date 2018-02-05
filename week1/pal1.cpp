@@ -1,5 +1,22 @@
 #include <iostream>
 
+
+bool is_palindrome(std::string s) {
+  int len = s.length();
+  int i = 0;
+  int j = len - 1;
+
+  for(i; i < len/2; i++) {
+    if(s[i] != s[j]) {
+      return 0;
+    }
+    j--;
+  }
+
+  return 1;
+  
+}
+
 int main()
 {
    /*
@@ -10,5 +27,16 @@ int main()
     * For this first version, use all the C++ facilities covered so far to 
     * implement the code.
     */
-   return 0;
+
+  using namespace std;
+
+  cout << "Enter a word: ";
+  
+  string s;
+  cin >> s;
+  cout << s << endl;
+
+  
+  cout << is_palindrome(s) << endl;
+  return 0;
 }
