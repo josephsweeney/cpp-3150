@@ -15,5 +15,5 @@ q5: q5.cpp
 	$(CC) $(CFLAGS) $< -o $@
 clean:
 	@echo "Cleanup..." 
-	rm -rf *.o *~
+	rm -rf *.o *~ q1 q2 q3 q4 q5
 

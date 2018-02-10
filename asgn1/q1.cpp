@@ -1,7 +1,31 @@
 #include <iostream>
 
+long getInput() {
+    long num;
+    std::cout << "Give an integer to factor: ";
+    std::cin >> num;
+    return num;
+}
+
+void findFactors(long num) {
+    long start = 2;
+    long curr = start;
+
+    while(num > 1) {
+       if(num % curr == 0) {
+           num /= curr;
+           std::cout << curr << " ";
+       }
+       else {
+           curr += 1;
+       }
+    }
+    std::cout << "\n";
+}
+
 int main()
 {
-  std::cout << "Ok, get to work!" << std::endl;
-  return 0;
+    long num = getInput();
+    findFactors(num);
+    return 0;
 }
