@@ -1,5 +1,7 @@
 #include <iostream>
 
+// authors: jds13019 rdp12004
+
 long getInput() {
     long num;
     std::cout << "Give an integer to factor: ";
