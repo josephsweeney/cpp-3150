@@ -3,6 +3,8 @@
 #include <list>
 #include <iostream>
 
+// authors: jds13019 rdp12004
+
 int main()
 {
   using namespace std;
