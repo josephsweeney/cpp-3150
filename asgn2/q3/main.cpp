@@ -9,7 +9,14 @@ int main()
 {
   using namespace std;
   list<string> words;
-  buildList(words);
+  try {
+    buildList(words);
+  }
+  catch(string s){
+    cout << "Exception: " << s << endl;
+    return 1;
+  }
+      
   for(auto w : words) {
     cout << w << endl;
   }
