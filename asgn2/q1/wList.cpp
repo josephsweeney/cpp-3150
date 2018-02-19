@@ -5,9 +5,9 @@
 
 using namespace std;
 
-void buildList(list<string> *words) {
+void buildList(list<string> &words) {
   string x;
   while(cin >> x) {
-    (*words).push_back(x);
+    words.push_back(x);
   }
 }

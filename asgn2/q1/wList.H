@@ -9,7 +9,7 @@
 #include <list>
 #include <string>
 using namespace std;
-void buildList(list<string> *words);
+void buildList(list<string> &words);
 
 
 #endif

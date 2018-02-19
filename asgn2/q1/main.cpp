@@ -9,7 +9,7 @@ int main()
 {
   using namespace std;
   list<string> words;
-  buildList(&words);
+  buildList(words);
   for(auto w : words) {
     cout << w << endl;
   }
