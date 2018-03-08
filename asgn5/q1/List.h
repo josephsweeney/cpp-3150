@@ -3,6 +3,8 @@
 #include <memory>
 #include <iostream>
 
+// authors: jds13019 rdp12004
+
 using namespace std;
 
 template <class T>
@@ -14,10 +16,6 @@ public:
     Node *next;
     Node(T&& v) {val = std::move(v); next = nullptr;}
     Node(const T& v) {val = v; next = nullptr;}
-
-  /* Node(T&& v) : val(std::move(v)), next(nullptr) {} */
-  /* Node(const T& v) : val(v), next(nullptr) {} */
-
   };
 private:
    // TODO
@@ -51,9 +49,7 @@ public:
     insert(new Node(v));
   }
   void insert(T&& v) {
-    Node *n = new Node(std::move(v));
-    n->next = head;
-    head = n;
+    insert(new Node(std::move(v)));
   }
 
   void append(const T& v) {
